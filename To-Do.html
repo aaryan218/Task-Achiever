@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskAchiver - Professional Todo Manager</title>
+    <link rel="stylesheet" href="Todo.css">
+    <script src="To-do.js" defer></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="theme-toggle" onclick="toggleTheme()"></div>
+            <h1>TaskAchiver</h1>
+            <p>Professional Task Management System</p>
+        </div>
+
+        <div class="input-section">
+            <input type="text" class="task-input" placeholder="Enter your task... (Press Enter to add)" id="taskInput">
+            <select class="priority-select" id="prioritySelect">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <button class="add-btn" onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number" id="totalTasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="completedTasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="pendingTasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterTasks('all')">All Tasks</button>
+            <button class="filter-btn" onclick="filterTasks('pending')">Pending</button>
+            <button class="filter-btn" onclick="filterTasks('completed')">Completed</button>
+            <button class="filter-btn" onclick="filterTasks('high')">High Priority</button>
+            <button class="filter-btn" onclick="filterTasks('medium')">Medium Priority</button>
+            <button class="filter-btn" onclick="filterTasks('low')">Low Priority</button>
+        </div>
+
+        <div class="todo-list" id="todoList">
+            <div class="empty-state">
+                <div style="font-size: 4rem; margin-bottom: 20px;">📝</div>
+                <h3>No tasks yet!</h3>
+                <p>Add your first task above to get started with TaskAchiver.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
